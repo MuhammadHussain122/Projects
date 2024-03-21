@@ -2,21 +2,24 @@
 
 import inquirer from "inquirer";
 import chalk from "chalk";
-import chalkAnimation, { rainbow } from "chalk-animation";
+import chalkAnimation from "chalk-animation";
 
-const sleep= ()=>{
+const rest= ()=>{
     return new Promise((res)=>{
         setTimeout(res, 2000);
     })
 }
-async function welcome(){
-    let title =chalkAnimation.rainbow("Let's start calculation");
-    await sleep();
+async function welcomeMsg(){
+    let title =chalkAnimation.rainbow("Be ready to dive into the calculation");
+    await rest();
     title.stop();
     console.log(` _____________________
     |  _________________  |
     | | JO           0. | |
     | |_________________| |
+    |  ___ ___ ___   ___  |
+    | |ex | √ | ^ | | % | |
+    | |___|___|___| |___| |                  |
     |  ___ ___ ___   ___  |
     | | 7 | 8 | 9 | | + | |
     | |___|___|___| |___| |
@@ -29,38 +32,44 @@ async function welcome(){
     |_____________________|`);
 }
 
-await welcome();
+await welcomeMsg();
 
 async function question() {   
-const answer = await inquirer.prompt([
+const ans = await inquirer.prompt([
   {
-    message: "Select of the operators to perform operation",
+    message: "Select one of the operators to perform operation",
     type: "list",
     name: "operator",
-    choices: ["Addition", "Subtraction", "Multiplication", "Division"],
+    choices: ["Addition", "Subtraction", "Multiplication", "Division", "Remainder", "Power"],
   },
   { message: "Enter first number", type: "number", name: "firstNumber" },
   { message: "Enter second number", type: "number", name: "secondNumber" },
   
 ]);
 
-if(answer.operator== "Addition"){
-    console.log(chalk.yellow(`${answer.firstNumber} + ${answer.secondNumber} = ${answer.firstNumber + answer.secondNumber}`));
+if(ans.operator== "Addition"){
+    console.log(chalk.yellow(`${ans.firstNumber} + ${ans.secondNumber} = ${ans.firstNumber + ans.secondNumber}`));
 }
-else if(answer.operator== "Subtraction"){
-    console.log(chalk.yellow(`${answer.firstNumber} - ${answer.secondNumber} = ${answer.firstNumber - answer.secondNumber}`));
+else if(ans.operator== "Subtraction"){
+    console.log(chalk.yellow(`${ans.firstNumber} - ${ans.secondNumber} = ${ans.firstNumber - ans.secondNumber}`));
 }
-else if(answer.operator== "Multiplication"){
-    console.log(chalk.yellow(`${answer.firstNumber} * ${answer.secondNumber} = ${answer.firstNumber * answer.secondNumber}`));
+else if(ans.operator== "Multiplication"){
+    console.log(chalk.yellow(`${ans.firstNumber} * ${ans.secondNumber} = ${ans.firstNumber * ans.secondNumber}`));
 }
-else if(answer.operator== "Division"){
-    console.log(chalk.yellow(`${answer.firstNumber} / ${answer.secondNumber} = ${answer.firstNumber / answer.secondNumber}`));
+else if(ans.operator== "Division"){
+    console.log(chalk.yellow(`${ans.firstNumber} / ${ans.secondNumber} = ${ans.firstNumber / ans.secondNumber}`));
+}
+else if(ans.operator== "Remainder"){
+    console.log(chalk.yellow(`${ans.firstNumber} % ${ans.secondNumber} = ${ans.firstNumber % ans.secondNumber}`));
+}
+else if(ans.operator== "Power"){
+    console.log(chalk.yellow(`${ans.firstNumber} ^ ${ans.secondNumber} = ${Math.pow(ans.firstNumber, ans.secondNumber)}`));
 }
 else{
-    console.log("Please select valid operator");
+    console.log("Please select a valid operator");
 }
 };
-async function startAgain(){
+async function calculateAgain(){
     do{
         await question();
         var again = await
@@ -71,6 +80,6 @@ async function startAgain(){
 
         })
     }
-    while(again.restart == "y" || again.restart == "y" || again.restart == "yes" || again.restart == "YES");
+    while(again.restart == "y" || again.restart == "y" || again.restart == "yes" || again.restart == "Yes");
 }
-startAgain();
+calculateAgain();

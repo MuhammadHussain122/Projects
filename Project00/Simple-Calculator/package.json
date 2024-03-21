@@ -1,6 +1,6 @@
 {
   "name": "mh01-simple-calculator",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "CLI based Simple Calculator using typescript, node.js and inquirer.",
   "main": "index.js",
   "type": "module",

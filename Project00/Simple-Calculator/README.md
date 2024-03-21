@@ -16,6 +16,9 @@ First Project - Project00
  - Subtraction of two numbers.
  - Multiplication of two numbers.
  - Division of two numbers.
+ - Remainder 
+ - Power of a number
+ 
 
 -- License:
 This project is licensed under the MIT Lisensce. 
