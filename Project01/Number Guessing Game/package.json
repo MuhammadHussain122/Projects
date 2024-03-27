@@ -1,7 +1,7 @@
 {
   "name": "mh02number_guessing_game",
-  "version": "1.0.0",
-  "description": "A cli based number guessing game using typescript, node.js, inquirer, chalk and chalk animation.",
+  "version": "1.0.1",
+  "description": "CLI based Number Guessing Game using typescript, node.js, inquirer, chalk and chalk animation.",
   "main": "index.js",
   "type": "module",
   "bin": "index.js",
