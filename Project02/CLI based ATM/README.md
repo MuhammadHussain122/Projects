@@ -5,7 +5,7 @@ An ATM built using Typescript, Node.js, Inquirer, Chalk and Chalk-animation.
 
 -- Installation:
   1. Clone the Repository
-    git clone https://github.com/MuhammadHussain122/Projects 
+    git clone https://github.com/MuhammadHussain122/Projects/tree/master/Project02/CLI%20based%20ATM
 
   2. Install package
  
@@ -14,7 +14,7 @@ An ATM built using Typescript, Node.js, Inquirer, Chalk and Chalk-animation.
 -- features: 
  - Cash Withdrawal
  - Fast Withdrawal
- - Blance Iquiry
+ - Balance Inquiry
  - Change PIN
 
  
