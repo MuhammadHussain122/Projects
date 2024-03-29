@@ -63,9 +63,14 @@ async function startTranscation() {
                 },
             ]);
             if (fastWithdrawalOptions.userfastWithdrawalOptions == "10000") {
-                userCurrentBalance -= fastWithdrawalOptions.userfastWithdrawalOptions;
-                console.log(chalk.green("Amount withdrawn Successfully"));
-                console.log(`Your remaining balance is : ${userCurrentBalance}`);
+                if (fastWithdrawalOptions.userfastWithdrawalOptions <= userCurrentBalance) {
+                    userCurrentBalance -= fastWithdrawalOptions.userfastWithdrawalOptions;
+                    console.log(chalk.green("Amount withdrawn Successfully"));
+                    console.log(`Your remaining balance is : ${userCurrentBalance}`);
+                }
+                else {
+                    console.log(chalk.red("Insufficient balance!"));
+                }
             }
             else if (fastWithdrawalOptions.userfastWithdrawalOptions === "15000") {
                 if (fastWithdrawalOptions.userfastWithdrawalOptions <= userCurrentBalance) {
