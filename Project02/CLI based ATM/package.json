@@ -1,6 +1,6 @@
 {
   "name": "mh03_automated_teller_machine",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI based ATM using typescript, node.js, inquirer, chalk and chalk animation.",
   "main": "index.js",
   "type": "module",
