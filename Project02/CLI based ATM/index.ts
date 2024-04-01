@@ -41,15 +41,15 @@ async function startTranscation() {
     ]);
 
     if (userOperation.operationOptions === "Cash Withdrawal") {
-      let withdrawAmount = await inquirer.prompt([
+      let withdrawalAmount = await inquirer.prompt([
         {
-          name: "withdrawOption",
+          name: "userWithdrawalAmount",
           message: "Please enter your amount",
           type: "number",
         },
       ]);
-      if (withdrawAmount.withdrawOption <= userCurrentBalance) {
-        userCurrentBalance -= withdrawAmount.withdrawOption;
+      if (withdrawalAmount.userWithdrawalAmount <= userCurrentBalance) {
+        userCurrentBalance -= withdrawalAmount.userWithdrawalAmount;
         console.log(chalk.green("Amount withdrawn successfully"));
         console.log(`Your remaining balance is : ${userCurrentBalance}`);
       } else {
