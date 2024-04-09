@@ -1,15 +1,13 @@
 Governor Sindh Kamran Khan Initiative For Cloud Applied Generative AI.                                    
 Fifth Project - Project04                                                                                 
-- Currency Convertor:                                                                                     
-A simple Currency Convertor using Typescript, Node.js, Inquirer, Chalk and Chalk-animation.               
+- Currency Converter:                                                                                     
+A simple Currency Converter using Typescript, Node.js, Inquirer, Chalk and Chalk-animation.               
 
 -- Installation:
   1. Clone the Repository
-    git clone https://github.com/MuhammadHussain122/Projects
-
+    https://github.com/MuhammadHussain122/Projects/tree/master/Project04
   2. Install package
- 
-    npx mh05_currency_convertor
+    npx mh05_currency_converter
 
 -- features: 
  - Ask user to select a currency to convert from.                                                         

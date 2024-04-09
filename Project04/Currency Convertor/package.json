@@ -1,7 +1,7 @@
 {
-  "name": "mh05_currency_convertor",
+  "name": "mh05_currency_converter",
   "version": "1.0.0",
-  "description": "A simple Currency Convertor using Typescript, Node.js, Inquirer, Chalk and Chalk-animation",
+  "description": "A simple Currency Converter using Typescript, Node.js, Inquirer, Chalk and Chalk-animation",
   "main": "index.js",
   "type": "module",
   "bin": "index.js",
