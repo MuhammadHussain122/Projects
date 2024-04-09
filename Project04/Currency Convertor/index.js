@@ -4,7 +4,7 @@ import chalk from "chalk";
 import chalkAnimation from "chalk-animation";
 const currency = {
     USD: 1,
-    PKR: 277.8,
+    PKR: 277.90,
     EURO: 0.92,
     YUAN: 7.23,
     INR: 83.2,
@@ -19,12 +19,12 @@ const rest = () => {
     });
 };
 async function welcome() {
-    let title = chalkAnimation.neon("currency convertor");
+    let title = chalkAnimation.neon("currency converter");
     await rest();
     title.stop();
 }
 await welcome();
-async function currencyConvertor() {
+async function currencyConverter() {
     let userInputs = await inquirer.prompt([
         {
             name: "currencyFrom",
@@ -69,14 +69,14 @@ async function currencyConvertor() {
     let amount = userInputs.amount;
     let baseAmount = amount / fromCurrency;
     let convertedAmount = baseAmount * toCurrency;
-    console.log(chalk.green(convertedAmount));
+    console.log(chalk.green(convertedAmount.toFixed(2)));
 }
-async function useCurrencyConvertorAgain() {
+async function useCurrencyConverterAgain() {
     do {
-        await currencyConvertor();
+        await currencyConverter();
         var getUserInputAgain = await inquirer.prompt({
             name: "getInputAgain",
-            message: "Do you want to use currency convertor again?",
+            message: "Do you want to use currency converter again?",
             type: "input",
         });
     } while (getUserInputAgain.getInputAgain === "y" ||
@@ -85,4 +85,4 @@ async function useCurrencyConvertorAgain() {
         getUserInputAgain.getInputAgain === "Yes" ||
         getUserInputAgain.getInputAgain === "YES");
 }
-useCurrencyConvertorAgain();
+useCurrencyConverterAgain();
