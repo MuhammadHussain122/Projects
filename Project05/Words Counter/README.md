@@ -9,10 +9,10 @@ A simple Word Counter using Typescript, Node.js, Inquirer, Chalk and Chalk-anima
   2. Install package
     npx mh06_word_counter
 
--- features: 
--- Ask user to input a sentence.                                                                          
--- Display the words in that sentence.                                                                    
--- Counts the number of words in that sentence and display the number.                                    
+-- features:                                                                                              
+ - Ask user to input a sentence.                                                                          
+ - Display the words in that sentence.                                                                    
+ - Counts the number of words in that sentence and display the number.                                    
  
 -- License:
 This project is licensed under the MIT Lisensce. 
