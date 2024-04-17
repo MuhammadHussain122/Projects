@@ -1,0 +1,25 @@
+{
+  "name": "mh06_word_counter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "bin": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "muhammad_hussain",
+  "license": "MIT",
+  "description": "A simple Word Counter using Typescript, Node.js, Inquirer, Chalk and Chalk-animation.",
+
+ "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/chalk-animation": "^1.6.3",
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^20.12.7",
+    "chalk": "^5.3.0",
+    "chalk-animation": "^2.0.3"
+  },
+  "dependencies": {
+    "inquirer": "^9.2.19"
+  }
+}  
